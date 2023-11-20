@@ -1,13 +1,13 @@
 from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework.serializers import ListField, ModelSerializer
 
-from .models import Order, OrderItem
+from .models import Order, OrderItem, Product
 
 
 class OrderItemSerializer(ModelSerializer):
     class Meta:
         model = OrderItem
-        fields = ['product', 'amount']
+        fields = ['product', 'quantity']
 
 
 class OrderSerializer(ModelSerializer):
@@ -23,8 +23,10 @@ class OrderSerializer(ModelSerializer):
     def create(self, validated_data):
         products = validated_data.pop('products')
         order = Order.objects.create(**validated_data)
-
-        for product_data in products:
-            OrderItem.objects.create(order=order, **product_data)
+        for product in products:
+            OrderItem.objects.create(order=order,
+                                     price=product['product'].price,
+                                     **product,
+                                     )
 
         return order

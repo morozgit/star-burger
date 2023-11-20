@@ -146,7 +146,7 @@ class Order(models.Model):
         verbose_name_plural = 'заказы'
 
     def __str__(self):
-        return self.first_name
+        return self.firstname
 
 
 class OrderItem(models.Model):
@@ -162,8 +162,12 @@ class OrderItem(models.Model):
         verbose_name='продукт',
         on_delete=models.CASCADE
     )
-
-    amount = models.IntegerField(
+    price = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        default=0
+    )
+    quantity = models.IntegerField(
         verbose_name='количество',
         default=0
     )
