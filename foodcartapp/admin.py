@@ -1,7 +1,11 @@
 from django.contrib import admin
+from django.http import HttpResponseBadRequest, HttpResponseRedirect
 from django.shortcuts import reverse
 from django.templatetags.static import static
 from django.utils.html import format_html
+from django.utils.http import url_has_allowed_host_and_scheme
+
+from star_burger.settings import ALLOWED_HOSTS
 
 from .models import (Order, OrderItem, Product, ProductCategory, Restaurant,
                      RestaurantMenuItem)
@@ -126,3 +130,12 @@ class OrderAdmin(admin.ModelAdmin):
             instance.price = instance.product.price
             instance.save()
         formset.save_m2m()
+
+    def response_change(self, request, obj):
+        res = super(OrderAdmin, self).response_change(request, obj)
+        if "next" in request.GET:
+            next_url = request.GET['next']
+            if not url_has_allowed_host_and_scheme(next_url, allowed_hosts=ALLOWED_HOSTS):
+                return HttpResponseBadRequest("Invalid 'next' URL")
+
+        return res
