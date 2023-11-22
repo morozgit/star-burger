@@ -130,6 +130,10 @@ class Order(models.Model):
         ('FS', 'Обработанный'),
         ('PR', 'Необработанный'),
     ]
+    PAYMENT_CHOICES = [
+        ('CASH', 'Наличные'),
+        ('CARD', 'Электронно'),
+    ]
     firstname = models.CharField(
         verbose_name='имя',
         max_length=50
@@ -153,6 +157,15 @@ class Order(models.Model):
         default='Необработанный',
         verbose_name='статус'
     )
+
+    payment = models.CharField(
+        max_length=4,
+        choices=PAYMENT_CHOICES,
+        db_index=True,
+        default='Электронно',
+        verbose_name='способ оплаты'
+    )
+
     comment = models.TextField(
         null=True, blank=True,
         verbose_name='комментарий'
