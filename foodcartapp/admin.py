@@ -118,7 +118,15 @@ class OrderAdmin(admin.ModelAdmin):
         'firstname',
         'address',
         'phonenumber',
-        'comment'
+        'comment',
+        'registered_at',
+        'called_at',
+        'delivered_at'
+    ]
+    list_filter = [
+        'registered_at',
+        'called_at',
+        'delivered_at'
     ]
     inlines = [
             OrderItemItemInline
