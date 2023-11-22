@@ -125,6 +125,10 @@ class RestaurantMenuItem(models.Model):
 
 
 class Order(models.Model):
+    STATUS_CHOICES = [
+        ('FS', 'Обработанный'),
+        ('PR', 'Необработанный'),
+    ]
     firstname = models.CharField(
         verbose_name='имя',
         max_length=50
@@ -139,6 +143,13 @@ class Order(models.Model):
         verbose_name='адрес',
         max_length=50,
         db_index=True
+    )
+
+    status = models.CharField(
+        max_length=2,
+        choices=STATUS_CHOICES,
+        db_index=True,
+        default='Необработанный'
     )
 
     class Meta:

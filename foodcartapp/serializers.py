@@ -23,6 +23,7 @@ class OrderSerializer(ModelSerializer):
     def create(self, validated_data):
         products = validated_data.pop('products')
         order = Order.objects.create(**validated_data)
+        # order.get_status_display()
         for product in products:
             OrderItem.objects.create(order=order,
                                      price=product['product'].price,

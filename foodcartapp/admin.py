@@ -135,7 +135,8 @@ class OrderAdmin(admin.ModelAdmin):
         res = super(OrderAdmin, self).response_change(request, obj)
         if "next" in request.GET:
             next_url = request.GET['next']
-            if not url_has_allowed_host_and_scheme(next_url, allowed_hosts=ALLOWED_HOSTS):
+            if next_url and url_has_allowed_host_and_scheme(next_url, allowed_hosts=ALLOWED_HOSTS):
+                return HttpResponseRedirect(next_url)
+            elif next_url:
                 return HttpResponseBadRequest("Invalid 'next' URL")
-
         return res
