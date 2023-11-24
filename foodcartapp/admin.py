@@ -121,7 +121,8 @@ class OrderAdmin(admin.ModelAdmin):
         'comment',
         'registered_at',
         'called_at',
-        'delivered_at'
+        'delivered_at',
+        'restaurant'
     ]
     list_filter = [
         'registered_at',
