@@ -110,7 +110,7 @@ class RestaurantMenuItemQuerySet(models.QuerySet):
 
         restaurants = restaurants.filter(menu_items__product_id__in=product_ids)
 
-        return set(restaurants)
+        return restaurants.distinct()
 
 
 
