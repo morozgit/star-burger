@@ -122,7 +122,10 @@ def view_orders(request):
     orders = Order.objects.annotate(total_price=Sum(F('items__product__price') * F('items__quantity')))
     for order in orders:
         order.restaurants = RestaurantMenuItem.available.get_restaurants_by_order(order.id)
-        order_coords = fetch_coordinates(apikey, order.address)
+        try:
+            order_coords = fetch_coordinates(apikey, order.address)
+        except ValueError:
+            print('Координаты не корректны')
         for restaurant in order.restaurants:
             restaurant_coords = fetch_coordinates(apikey, restaurant.address)
             restaurant.order_distance = round(geodesic(restaurant_coords, order_coords).km, 3)

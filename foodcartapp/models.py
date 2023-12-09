@@ -1,4 +1,4 @@
-from django.core.validators import MinValueValidator
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.db.models.query import QuerySet
 from django.utils import timezone
@@ -243,7 +243,9 @@ class OrderItem(models.Model):
     price = models.DecimalField(
         max_digits=10,
         decimal_places=2,
+        validators=[MinValueValidator(0), MaxValueValidator(1000)]
     )
     quantity = models.IntegerField(
         verbose_name='количество',
+        validators=[MinValueValidator(1), MaxValueValidator(100)]
     )
