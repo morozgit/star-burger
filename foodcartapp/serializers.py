@@ -11,10 +11,8 @@ class OrderItemSerializer(ModelSerializer):
 
 
 class OrderSerializer(ModelSerializer):
-    products = ListField(
-        child=OrderItemSerializer(), allow_empty=False, write_only=True
-    )
     phonenumber = PhoneNumberField()
+    products = OrderItemSerializer(many=True, allow_empty=False, write_only=True)
 
     class Meta:
         model = Order
@@ -28,5 +26,4 @@ class OrderSerializer(ModelSerializer):
                                      price=product['product'].price,
                                      **product,
                                      )
-
         return order
