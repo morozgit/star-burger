@@ -191,7 +191,6 @@ class Order(models.Model):
     comment = models.TextField(
         blank=True,
         verbose_name='комментарий',
-        default=''
         )
 
     registered_at = models.DateTimeField(
@@ -241,9 +240,9 @@ class OrderItem(models.Model):
         on_delete=models.CASCADE
     )
     price = models.DecimalField(
-        max_digits=10,
+        max_digits=4,
         decimal_places=2,
-        validators=[MinValueValidator(0), MaxValueValidator(1000)]
+        validators=[MinValueValidator(0), MaxValueValidator(9999)]
     )
     quantity = models.IntegerField(
         verbose_name='количество',
