@@ -65,6 +65,12 @@ SECRET_KEY=django-insecure-0if40nf4nf93n4
 YANDEX_KEY=Ваш API ключ
 ```
 
+Определите переменную окружения `ROLLBAR_KEY` в файле `.env` в каталоге `star_burger/` и положите туда
+[API ключ](https://rollbar.com/):
+```sh
+ROLLBAR_KEY=Ваш API ключ
+```
+
 Создайте файл базы данных SQLite и отмигрируйте её следующей командой:
 
 ```sh
