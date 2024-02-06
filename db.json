@@ -1,0 +1,2296 @@
+[
+{
+    "model": "foodcartapp.restaurant",
+    "pk": 1,
+    "fields": {
+        "name": "Star Burger Арбат",
+        "address": "Москва, ул. Новый Арбат, 15",
+        "contact_phone": "+7 (967) 157-44-13"
+    }
+},
+{
+    "model": "foodcartapp.restaurant",
+    "pk": 2,
+    "fields": {
+        "name": "Star Burger Цветной",
+        "address": "Москва, Цветной бульвар, 11с2",
+        "contact_phone": "+7 (929) 949-55-36"
+    }
+},
+{
+    "model": "foodcartapp.restaurant",
+    "pk": 3,
+    "fields": {
+        "name": "Star Burger Европейский",
+        "address": "Москва, пл. Киевского Вокзала, 2",
+        "contact_phone": "+7 (929) 680-47-58"
+    }
+},
+{
+    "model": "foodcartapp.productcategory",
+    "pk": 1,
+    "fields": {
+        "name": "Бургер"
+    }
+},
+{
+    "model": "foodcartapp.product",
+    "pk": 1,
+    "fields": {
+        "name": "Стейкхаус",
+        "category": 1,
+        "price": "269.00",
+        "image": "steak_qiPciOE.jpg",
+        "special_status": false,
+        "description": "Стейкхаус – это сочетание нашей фирменной, приготовленной на огне 100% говядины с ломтиками бекона и соусом «Барбекю», майонезом, листьями свежего салата, помидором и хрустящим луком"
+    }
+},
+{
+    "model": "foodcartapp.product",
+    "pk": 2,
+    "fields": {
+        "name": "Лонг Чизбургер",
+        "category": 1,
+        "price": "219.00",
+        "image": "long_chiz_sDpdEpA.jpg",
+        "special_status": false,
+        "description": "Лонг Чизбургер – эталон в коллекции чизбургеров! Два приготовленных на огне бифштекса с двумя ломтиками слегка расплавленного сыра, хрустящими огурчиками, рубленым луком"
+    }
+},
+{
+    "model": "foodcartapp.product",
+    "pk": 3,
+    "fields": {
+        "name": "Тройной Воппер",
+        "category": 1,
+        "price": "369.00",
+        "image": "triple_vopper_51o8kBh.jpg",
+        "special_status": false,
+        "description": "ВОППЕР — это вкуснейшая приготовленная на огне 100% говядина с сочными помидорами, свежим нарезанным листовым салатом, густым майонезом"
+    }
+},
+{
+    "model": "foodcartapp.product",
+    "pk": 4,
+    "fields": {
+        "name": "Беконайзер",
+        "category": 1,
+        "price": "319.00",
+        "image": "beconizer_rocJi2U.jpg",
+        "special_status": false,
+        "description": "Встречай самый внушительный бургер в коллекции Бургер Кинг. Много мяса, много бекона и много сыра - все, как ты любишь, и ничего лишнего!"
+    }
+},
+{
+    "model": "foodcartapp.restaurantmenuitem",
+    "pk": 2,
+    "fields": {
+        "restaurant": 3,
+        "product": 2,
+        "availability": true
+    }
+},
+{
+    "model": "foodcartapp.restaurantmenuitem",
+    "pk": 3,
+    "fields": {
+        "restaurant": 3,
+        "product": 3,
+        "availability": true
+    }
+},
+{
+    "model": "foodcartapp.restaurantmenuitem",
+    "pk": 4,
+    "fields": {
+        "restaurant": 2,
+        "product": 4,
+        "availability": true
+    }
+},
+{
+    "model": "foodcartapp.restaurantmenuitem",
+    "pk": 5,
+    "fields": {
+        "restaurant": 2,
+        "product": 2,
+        "availability": false
+    }
+},
+{
+    "model": "foodcartapp.restaurantmenuitem",
+    "pk": 7,
+    "fields": {
+        "restaurant": 1,
+        "product": 2,
+        "availability": true
+    }
+},
+{
+    "model": "foodcartapp.restaurantmenuitem",
+    "pk": 8,
+    "fields": {
+        "restaurant": 1,
+        "product": 1,
+        "availability": true
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 2,
+    "fields": {
+        "firstname": "Василий",
+        "lastname": "Васильев",
+        "phonenumber": "+79992346512",
+        "address": "Москва, ул. Новый Арбат, 15",
+        "status": "PR",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-11-22T09:49:10.001Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 3,
+    "fields": {
+        "firstname": "Иван",
+        "lastname": "Иванов",
+        "phonenumber": "+79995546512",
+        "address": "Москва, пл. Киевского Вокзала, 2",
+        "status": "PR",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-11-22T09:49:10.001Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 5,
+    "fields": {
+        "firstname": "Генерал",
+        "lastname": "Полковников",
+        "phonenumber": "+79992346512",
+        "address": "Москва, ул. Новый Арбат, 15",
+        "status": "FS",
+        "payment": "Электронно",
+        "comment": "Не платит",
+        "registered_at": "2023-11-22T09:49:10.001Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 6,
+    "fields": {
+        "firstname": "Пилот",
+        "lastname": "Пилотов",
+        "phonenumber": "+79995546512",
+        "address": "Москва, ул. Новый Арбат, 15",
+        "status": "FS",
+        "payment": "CASH",
+        "comment": "",
+        "registered_at": "2023-11-22T09:49:10Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 7,
+    "fields": {
+        "firstname": "Ефпатий",
+        "lastname": "Ефпатиев",
+        "phonenumber": "+79332346512",
+        "address": "Москва, Цветной бульвар, 11с2",
+        "status": "PR",
+        "payment": "CASH",
+        "comment": "",
+        "registered_at": "2023-11-22T09:49:10Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": 2
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 8,
+    "fields": {
+        "firstname": "Слон",
+        "lastname": "Большов",
+        "phonenumber": "+79332346512",
+        "address": "Москва, ул. Новый Арбат, 15",
+        "status": "Необработанный",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-12-09T18:06:24.595Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 9,
+    "fields": {
+        "firstname": "Кузьма",
+        "lastname": "Водов",
+        "phonenumber": "+79332346512",
+        "address": "Москва, пл. Киевского Вокзала, 2",
+        "status": "Необработанный",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-12-09T18:09:38.803Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 10,
+    "fields": {
+        "firstname": "Товарищ",
+        "lastname": "Волков",
+        "phonenumber": "+79332346512",
+        "address": "Москва, Цветной бульвар, 11с2",
+        "status": "Необработанный",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-12-09T18:12:01.279Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 11,
+    "fields": {
+        "firstname": "бренден",
+        "lastname": "стрейзер",
+        "phonenumber": "+79332346512",
+        "address": "Москва, ул. Новый Арбат, 15",
+        "status": "Необработанный",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-12-10T12:39:23.492Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 12,
+    "fields": {
+        "firstname": "чук",
+        "lastname": "чуков",
+        "phonenumber": "+79332346512",
+        "address": "Москва, Цветной бульвар, 11с2",
+        "status": "Необработанный",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-12-10T12:43:39.257Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 13,
+    "fields": {
+        "firstname": "гек",
+        "lastname": "геков",
+        "phonenumber": "+79332346512",
+        "address": "Москва, ул. Новый Арбат, 15",
+        "status": "Необработанный",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-12-10T12:45:12.632Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 14,
+    "fields": {
+        "firstname": "соня",
+        "lastname": "сщнева",
+        "phonenumber": "+79995546512",
+        "address": "Москва, Цветной бульвар, 11с2",
+        "status": "Необработанный",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-12-10T12:49:17.253Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 15,
+    "fields": {
+        "firstname": "света",
+        "lastname": "светова",
+        "phonenumber": "+79332346512",
+        "address": "Москва, Цветной бульвар, 11с2",
+        "status": "Необработанный",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-12-10T12:52:59.508Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 16,
+    "fields": {
+        "firstname": "гала",
+        "lastname": "галова",
+        "phonenumber": "+79992346512",
+        "address": "Москва, пл. Киевского Вокзала, 2",
+        "status": "Необработанный",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-12-10T13:05:01.311Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 17,
+    "fields": {
+        "firstname": "Тоня",
+        "lastname": "Тонева",
+        "phonenumber": "+79992346512",
+        "address": "Москва, Цветной бульвар, 11с2",
+        "status": "Необработанный",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-12-10T13:31:55.268Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.order",
+    "pk": 18,
+    "fields": {
+        "firstname": "гуля",
+        "lastname": "гулева",
+        "phonenumber": "+79332346512",
+        "address": "Москва, ул. Новый Арбат, 15",
+        "status": "Необработанный",
+        "payment": "Электронно",
+        "comment": "",
+        "registered_at": "2023-12-10T13:35:12.842Z",
+        "called_at": null,
+        "delivered_at": null,
+        "restaurant": null
+    }
+},
+{
+    "model": "foodcartapp.orderitem",
+    "pk": 1,
+    "fields": {
+        "order": 2,
+        "product": 2,
+        "price": "219.00",
+        "quantity": 3
+    }
+},
+{
+    "model": "foodcartapp.orderitem",
+    "pk": 2,
+    "fields": {
+        "order": 3,
+        "product": 2,
+        "price": "250.00",
+        "quantity": 2
+    }
+},
+{
+    "model": "foodcartapp.orderitem",
+    "pk": 4,
+    "fields": {
+        "order": 5,
+        "product": 1,
+        "price": "269.00",
+        "quantity": 0
+    }
+},
+{
+    "model": "foodcartapp.orderitem",
+    "pk": 6,
+    "fields": {
+        "order": 6,
+        "product": 2,
+        "price": "219.00",
+        "quantity": 2
+    }
+},
+{
+    "model": "foodcartapp.orderitem",
+    "pk": 8,
+    "fields": {
+        "order": 7,
+        "product": 3,
+        "price": "369.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "foodcartapp.orderitem",
+    "pk": 9,
+    "fields": {
+        "order": 8,
+        "product": 2,
+        "price": "219.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "foodcartapp.orderitem",
+    "pk": 10,
+    "fields": {
+        "order": 9,
+        "product": 1,
+        "price": "269.00",
+        "quantity": 1
+    }
+},
+{
+    "model": "foodcartapp.orderitem",
+    "pk": 11,
+    "fields": {
+        "order": 10,
+        "product": 4,
+        "price": "319.00",
+        "quantity": 4
+    }
+},
+{
+    "model": "foodcartapp.orderitem",
+    "pk": 12,
+    "fields": {
+        "order": 13,
+        "product": 4,
+        "price": "319.00",
+        "quantity": 3
+    }
+},
+{
+    "model": "foodcartapp.orderitem",
+    "pk": 13,
+    "fields": {
+        "order": 17,
+        "product": 2,
+        "price": "219.00",
+        "quantity": 3
+    }
+},
+{
+    "model": "foodcartapp.orderitem",
+    "pk": 14,
+    "fields": {
+        "order": 18,
+        "product": 1,
+        "price": "269.00",
+        "quantity": 3
+    }
+},
+{
+    "model": "place.place",
+    "pk": 1,
+    "fields": {
+        "address_place": "Москва, ул. Новый Арбат, 15",
+        "lat": "55.75",
+        "lon": "37.59",
+        "request_date": "2023-11-26"
+    }
+},
+{
+    "model": "place.place",
+    "pk": 2,
+    "fields": {
+        "address_place": "Москва, пл. Киевского Вокзала, 2",
+        "lat": "55.74",
+        "lon": "37.57",
+        "request_date": "2023-11-26"
+    }
+},
+{
+    "model": "place.place",
+    "pk": 3,
+    "fields": {
+        "address_place": "Москва, Цветной бульвар, 11с2",
+        "lat": "55.77",
+        "lon": "37.62",
+        "request_date": "2023-11-26"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2023-11-20T14:09:53.610Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "1",
+        "object_repr": "Бургер",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2023-11-20T14:12:00.634Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "1",
+        "object_repr": "Стейкхаус",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2023-11-20T14:12:49.897Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "2",
+        "object_repr": "Лонг Чизбургер",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2023-11-20T14:13:35.875Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "3",
+        "object_repr": "Тройной Воппер",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2023-11-20T14:14:13.488Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "4",
+        "object_repr": "Беконайзер",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2023-11-20T14:15:39.440Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "1",
+        "object_repr": "Star Burger Арбат",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2023-11-20T14:15:59.837Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "2",
+        "object_repr": "Star Burger Цветной",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2023-11-20T14:16:21.303Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "3",
+        "object_repr": "Star Burger Европейский",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2023-11-20T14:17:04.646Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "3",
+        "object_repr": "Star Burger Европейский",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0415\\u0432\\u0440\\u043e\\u043f\\u0435\\u0439\\u0441\\u043a\\u0438\\u0439 - \\u0421\\u0442\\u0435\\u0439\\u043a\\u0445\\u0430\\u0443\\u0441\"}}, {\"added\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0415\\u0432\\u0440\\u043e\\u043f\\u0435\\u0439\\u0441\\u043a\\u0438\\u0439 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\"}}, {\"added\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0415\\u0432\\u0440\\u043e\\u043f\\u0435\\u0439\\u0441\\u043a\\u0438\\u0439 - \\u0422\\u0440\\u043e\\u0439\\u043d\\u043e\\u0439 \\u0412\\u043e\\u043f\\u043f\\u0435\\u0440\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2023-11-20T14:17:16.871Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "2",
+        "object_repr": "Star Burger Цветной",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0426\\u0432\\u0435\\u0442\\u043d\\u043e\\u0439 - \\u0411\\u0435\\u043a\\u043e\\u043d\\u0430\\u0439\\u0437\\u0435\\u0440\"}}, {\"added\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0426\\u0432\\u0435\\u0442\\u043d\\u043e\\u0439 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\"}}, {\"added\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0426\\u0432\\u0435\\u0442\\u043d\\u043e\\u0439 - \\u0421\\u0442\\u0435\\u0439\\u043a\\u0445\\u0430\\u0443\\u0441\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2023-11-20T14:17:30.826Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "1",
+        "object_repr": "Star Burger Арбат",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\"}}, {\"added\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u0421\\u0442\\u0435\\u0439\\u043a\\u0445\\u0430\\u0443\\u0441\"}}, {\"added\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u0422\\u0440\\u043e\\u0439\\u043d\\u043e\\u0439 \\u0412\\u043e\\u043f\\u043f\\u0435\\u0440\"}}, {\"added\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u0411\\u0435\\u043a\\u043e\\u043d\\u0430\\u0439\\u0437\\u0435\\u0440\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2023-11-20T14:20:52.364Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "1",
+        "object_repr": "Василий",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2023-11-20T14:48:03.318Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иван",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"order item\", \"object\": \"OrderItem object (2)\", \"fields\": [\"Price\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2023-11-20T14:58:02.063Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иван",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2023-11-20T15:05:15.177Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иван",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"order item\", \"object\": \"OrderItem object (2)\", \"fields\": [\"Price\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2023-11-20T15:05:22.601Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иван",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"order item\", \"object\": \"OrderItem object (2)\", \"fields\": [\"Price\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2023-11-20T15:06:44.491Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "4",
+        "object_repr": "Полковник",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"order item\", \"object\": \"OrderItem object (3)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2023-11-20T15:08:36.165Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "4",
+        "object_repr": "Полковник",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2023-11-20T15:08:41.765Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "4",
+        "object_repr": "Полковник",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2023-11-20T15:09:33.180Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "5",
+        "object_repr": "Полковник",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"order item\", \"object\": \"OrderItem object (4)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2023-11-20T15:10:09.312Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "5",
+        "object_repr": "Полковник",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"order item\", \"object\": \"OrderItem object (4)\", \"fields\": [\"Price\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2023-11-20T15:10:24.894Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "5",
+        "object_repr": "Полковник",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"order item\", \"object\": \"OrderItem object (4)\", \"fields\": [\"Price\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2023-11-20T15:11:09.298Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "5",
+        "object_repr": "Генерал",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2023-11-20T15:13:44.172Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "5",
+        "object_repr": "Генерал",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2023-11-20T15:15:11.665Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "6",
+        "object_repr": "Пилот",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"order item\", \"object\": \"OrderItem object (5)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2023-11-20T15:28:08.042Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "6",
+        "object_repr": "Пилот",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"order item\", \"object\": \"OrderItem object (6)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2023-11-20T15:28:20.076Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "6",
+        "object_repr": "Пилот",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"order item\", \"object\": \"OrderItem object (6)\", \"fields\": [\"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2023-11-20T16:18:01.643Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "7",
+        "object_repr": "assaa",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2023-11-21T09:37:59.730Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иван",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2023-11-21T09:43:56.718Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "1",
+        "object_repr": "Стейкхаус",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2023-11-21T12:07:58.672Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иван",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2023-11-21T12:08:17.156Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "2",
+        "object_repr": "Василий fff",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2023-11-21T12:08:58.371Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "2",
+        "object_repr": "Василий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2023-11-21T12:09:51.045Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "5",
+        "object_repr": "Генералddd",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2023-11-21T12:13:04.587Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "5",
+        "object_repr": "Генерал",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2023-11-21T12:15:57.610Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иванvvv",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2023-11-21T12:18:16.633Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иван",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2023-11-21T12:18:44.642Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "6",
+        "object_repr": "Пилотvvv",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2023-11-21T12:54:17.963Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иванcc",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2023-11-21T12:58:40.051Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иван",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2023-11-21T12:59:13.129Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "6",
+        "object_repr": "Пилот",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2023-11-21T14:33:35.088Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "7",
+        "object_repr": "Ефпатий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2023-11-21T14:33:50.049Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "7",
+        "object_repr": "Ефпатийв",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2023-11-21T14:33:59.120Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "7",
+        "object_repr": "Ефпатий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2023-11-21T14:34:03.301Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "6",
+        "object_repr": "Пилотв",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2023-11-21T14:34:14.630Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "6",
+        "object_repr": "Пилот",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2023-11-21T14:34:39.125Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "2",
+        "object_repr": "Василийв",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2023-11-21T14:34:50.878Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "2",
+        "object_repr": "Василий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2023-11-21T14:34:57.236Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "7",
+        "object_repr": "Ефпатий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2023-11-22T08:02:02.957Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иванaas",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2023-11-22T08:03:14.924Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иван",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2023-11-22T08:06:54.958Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "5",
+        "object_repr": "Генералvvv",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2023-11-22T08:07:46.791Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "5",
+        "object_repr": "Генерал",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2023-11-22T08:08:36.752Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "2",
+        "object_repr": "Василийasd",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2023-11-22T08:09:38.447Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "2",
+        "object_repr": "Василий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2023-11-22T08:32:51.983Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "5",
+        "object_repr": "Генералasdsd",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2023-11-22T08:33:03.835Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "5",
+        "object_repr": "Генерал",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2023-11-22T08:35:03.524Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "7",
+        "object_repr": "Ефпатийaa",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2023-11-22T08:35:10.060Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "7",
+        "object_repr": "Ефпатий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2023-11-22T08:35:16.002Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "2",
+        "object_repr": "Василийss",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2023-11-22T08:35:24.612Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "2",
+        "object_repr": "Василий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2023-11-22T08:39:33.984Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "2",
+        "object_repr": "Василий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2023-11-22T08:39:42.261Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "3",
+        "object_repr": "Иван",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2023-11-22T08:58:21.619Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "5",
+        "object_repr": "Генерал",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Comment\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2023-11-22T12:12:06.084Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "6",
+        "object_repr": "Пилот",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043f\\u043e\\u0441\\u043e\\u0431 \\u043e\\u043f\\u043b\\u0430\\u0442\\u044b\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2023-11-22T14:27:01.860Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "4",
+        "object_repr": "Беконайзер",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u0411\\u0435\\u043a\\u043e\\u043d\\u0430\\u0439\\u0437\\u0435\\u0440\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2023-11-22T14:27:21.188Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "3",
+        "object_repr": "Тройной Воппер",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u0422\\u0440\\u043e\\u0439\\u043d\\u043e\\u0439 \\u0412\\u043e\\u043f\\u043f\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2023-11-22T14:27:27.701Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "2",
+        "object_repr": "Лонг Чизбургер",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0415\\u0432\\u0440\\u043e\\u043f\\u0435\\u0439\\u0441\\u043a\\u0438\\u0439 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2023-11-22T14:27:37.984Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "1",
+        "object_repr": "Стейкхаус",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0426\\u0432\\u0435\\u0442\\u043d\\u043e\\u0439 - \\u0421\\u0442\\u0435\\u0439\\u043a\\u0445\\u0430\\u0443\\u0441\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2023-11-22T14:28:25.127Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "1",
+        "object_repr": "Стейкхаус",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u0421\\u0442\\u0435\\u0439\\u043a\\u0445\\u0430\\u0443\\u0441\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2023-11-22T14:29:27.819Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "1",
+        "object_repr": "Стейкхаус",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2023-11-22T14:29:35.629Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "1",
+        "object_repr": "Стейкхаус",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0415\\u0432\\u0440\\u043e\\u043f\\u0435\\u0439\\u0441\\u043a\\u0438\\u0439 - \\u0421\\u0442\\u0435\\u0439\\u043a\\u0445\\u0430\\u0443\\u0441\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}, {\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u0421\\u0442\\u0435\\u0439\\u043a\\u0445\\u0430\\u0443\\u0441\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2023-11-22T14:29:53.781Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "1",
+        "object_repr": "Стейкхаус",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0415\\u0432\\u0440\\u043e\\u043f\\u0435\\u0439\\u0441\\u043a\\u0438\\u0439 - \\u0421\\u0442\\u0435\\u0439\\u043a\\u0445\\u0430\\u0443\\u0441\"}}, {\"deleted\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0426\\u0432\\u0435\\u0442\\u043d\\u043e\\u0439 - \\u0421\\u0442\\u0435\\u0439\\u043a\\u0445\\u0430\\u0443\\u0441\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2023-11-22T14:30:13.802Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "1",
+        "object_repr": "Стейкхаус",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2023-11-22T14:30:44.415Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "4",
+        "object_repr": "Беконайзер",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0426\\u0432\\u0435\\u0442\\u043d\\u043e\\u0439 - \\u0411\\u0435\\u043a\\u043e\\u043d\\u0430\\u0439\\u0437\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2023-11-22T14:30:49.051Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "3",
+        "object_repr": "Тройной Воппер",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0415\\u0432\\u0440\\u043e\\u043f\\u0435\\u0439\\u0441\\u043a\\u0438\\u0439 - \\u0422\\u0440\\u043e\\u0439\\u043d\\u043e\\u0439 \\u0412\\u043e\\u043f\\u043f\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2023-11-22T14:30:54.282Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "2",
+        "object_repr": "Лонг Чизбургер",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0426\\u0432\\u0435\\u0442\\u043d\\u043e\\u0439 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}, {\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2023-11-22T14:30:58.073Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "1",
+        "object_repr": "Стейкхаус",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2023-11-22T14:31:25.139Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "6",
+        "object_repr": "Пилот",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"order item\", \"object\": \"OrderItem object (None)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2023-11-22T14:31:41.048Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "7",
+        "object_repr": "Ефпатий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043f\\u043e\\u0441\\u043e\\u0431 \\u043e\\u043f\\u043b\\u0430\\u0442\\u044b\"]}}, {\"changed\": {\"name\": \"order item\", \"object\": \"OrderItem object (8)\", \"fields\": [\"\\u041f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2023-11-23T09:45:16.874Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "3",
+        "object_repr": "Star Burger Европейский",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0415\\u0432\\u0440\\u043e\\u043f\\u0435\\u0439\\u0441\\u043a\\u0438\\u0439 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2023-11-23T09:45:39.087Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "2",
+        "object_repr": "Star Burger Цветной",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0426\\u0432\\u0435\\u0442\\u043d\\u043e\\u0439 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2023-11-23T09:45:46.401Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "1",
+        "object_repr": "Star Burger Арбат",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2023-11-23T09:45:59.457Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "2",
+        "object_repr": "Star Burger Цветной",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0426\\u0432\\u0435\\u0442\\u043d\\u043e\\u0439 - \\u0411\\u0435\\u043a\\u043e\\u043d\\u0430\\u0439\\u0437\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}, {\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0426\\u0432\\u0435\\u0442\\u043d\\u043e\\u0439 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2023-11-23T09:47:37.138Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "4",
+        "object_repr": "Беконайзер",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2023-11-23T09:49:41.250Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "3",
+        "object_repr": "Тройной Воппер",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0415\\u0432\\u0440\\u043e\\u043f\\u0435\\u0439\\u0441\\u043a\\u0438\\u0439 - \\u0422\\u0440\\u043e\\u0439\\u043d\\u043e\\u0439 \\u0412\\u043e\\u043f\\u043f\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2023-11-23T09:50:33.601Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "2",
+        "object_repr": "Лонг Чизбургер",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0415\\u0432\\u0440\\u043e\\u043f\\u0435\\u0439\\u0441\\u043a\\u0438\\u0439 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}, {\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2023-11-23T09:50:54.990Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "1",
+        "object_repr": "Стейкхаус",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2023-11-24T18:27:02.134Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "3",
+        "object_repr": "Тройной Воппер",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u0422\\u0440\\u043e\\u0439\\u043d\\u043e\\u0439 \\u0412\\u043e\\u043f\\u043f\\u0435\\u0440\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2023-11-24T18:28:32.205Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "2",
+        "object_repr": "Лонг Чизбургер",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0415\\u0432\\u0440\\u043e\\u043f\\u0435\\u0439\\u0441\\u043a\\u0438\\u0439 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}, {\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2023-11-24T18:28:54.929Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "2",
+        "object_repr": "Лонг Чизбургер",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u043f\\u0443\\u043d\\u043a\\u0442 \\u043c\\u0435\\u043d\\u044e \\u0440\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\\u0430\", \"object\": \"Star Burger \\u0410\\u0440\\u0431\\u0430\\u0442 - \\u041b\\u043e\\u043d\\u0433 \\u0427\\u0438\\u0437\\u0431\\u0443\\u0440\\u0433\\u0435\\u0440\", \"fields\": [\"\\u0412 \\u043f\\u0440\\u043e\\u0434\\u0430\\u0436\\u0435\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2023-11-24T18:38:41.814Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "7",
+        "object_repr": "Ефпатий",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0420\\u0435\\u0441\\u0442\\u043e\\u0440\\u0430\\u043d\"]}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add товар",
+        "content_type": 1,
+        "codename": "add_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change товар",
+        "content_type": 1,
+        "codename": "change_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete товар",
+        "content_type": 1,
+        "codename": "delete_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view товар",
+        "content_type": 1,
+        "codename": "view_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add ресторан",
+        "content_type": 2,
+        "codename": "add_restaurant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change ресторан",
+        "content_type": 2,
+        "codename": "change_restaurant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete ресторан",
+        "content_type": 2,
+        "codename": "delete_restaurant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view ресторан",
+        "content_type": 2,
+        "codename": "view_restaurant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add пункт меню ресторана",
+        "content_type": 3,
+        "codename": "add_restaurantmenuitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change пункт меню ресторана",
+        "content_type": 3,
+        "codename": "change_restaurantmenuitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete пункт меню ресторана",
+        "content_type": 3,
+        "codename": "delete_restaurantmenuitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view пункт меню ресторана",
+        "content_type": 3,
+        "codename": "view_restaurantmenuitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add категория",
+        "content_type": 4,
+        "codename": "add_productcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change категория",
+        "content_type": 4,
+        "codename": "change_productcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete категория",
+        "content_type": 4,
+        "codename": "delete_productcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view категория",
+        "content_type": 4,
+        "codename": "view_productcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add заказ",
+        "content_type": 5,
+        "codename": "add_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change заказ",
+        "content_type": 5,
+        "codename": "change_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete заказ",
+        "content_type": 5,
+        "codename": "delete_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view заказ",
+        "content_type": 5,
+        "codename": "view_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add order item",
+        "content_type": 6,
+        "codename": "add_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change order item",
+        "content_type": 6,
+        "codename": "change_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete order item",
+        "content_type": 6,
+        "codename": "delete_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view order item",
+        "content_type": 6,
+        "codename": "view_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 7,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 7,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 7,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 7,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 8,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 8,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 8,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 8,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 9,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 9,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 9,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 9,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 10,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 10,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 10,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 10,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 11,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 11,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 11,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 11,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 12,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 12,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 12,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 12,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add place",
+        "content_type": 13,
+        "codename": "add_place"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change place",
+        "content_type": 13,
+        "codename": "change_place"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete place",
+        "content_type": 13,
+        "codename": "delete_place"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view place",
+        "content_type": 13,
+        "codename": "view_place"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$InG7SWNeGvhfecBQAjQgoL$M3rab9rSghATZxVGmBmfkz7/V/WLct3Az6pKewLnSyA=",
+        "last_login": "2023-12-09T18:03:01.505Z",
+        "is_superuser": true,
+        "username": "m",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-11-20T13:47:14.632Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "foodcartapp",
+        "model": "product"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "foodcartapp",
+        "model": "restaurant"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "foodcartapp",
+        "model": "restaurantmenuitem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "foodcartapp",
+        "model": "productcategory"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "foodcartapp",
+        "model": "order"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "foodcartapp",
+        "model": "orderitem"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ry0ij10sw0rqze8w3eej9idb002jz9xh",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBhKIwu3XsGMgyDVA1NSrsy3l2bdKHb_977LxVpXWpcu8xxzOqsjDr8bon4IW0D-U7tNmme2jKPSW-K3mnX1ynL87K7fweVev3WlhmkQHDEg0V2PgVkFICEaBAZvDgxJxsskGAoYHK2x0GIfKFASb0_5ZU4OQ:1rC1fJ:dSyHtDyJtRaGiGohpHsqOqW3uhfEgmeYkEgGGZZVE8Y",
+        "expire_date": "2023-12-23T18:03:01.526Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "tnuz743fzjolvdconas0tquvte8tgjcl",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBhKIwu3XsGMgyDVA1NSrsy3l2bdKHb_977LxVpXWpcu8xxzOqsjDr8bon4IW0D-U7tNmme2jKPSW-K3mnX1ynL87K7fweVev3WlhmkQHDEg0V2PgVkFICEaBAZvDgxJxsskGAoYHK2x0GIfKFASb0_5ZU4OQ:1r54cU:592-uKvCDbzuT6tY1XVtXTpCoHWf8PtrRToJ4E7GSZk",
+        "expire_date": "2023-12-04T13:47:22.506Z"
+    }
+}
+]

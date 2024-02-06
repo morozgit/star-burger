@@ -7,15 +7,17 @@ env = Env()
 env.read_env()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 SECRET_KEY = env('SECRET_KEY')
-DEBUG = env.bool('DEBUG', False)
-
+#DEBUG = env.bool('DEBUG', False)
+DEBUG = False
+ROLLBAR_KEY = env('ROLLBAR_KEY')
 YANDEX_KEY = env('YANDEX_KEY')
-
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', ['127.0.0.1', 'localhost'])
+DB_URL = env.str('DATABASE_URL')
+#ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', ['92.255.67.83', '127.0.0.1', 'localhost'])
+ALLOWED_HOSTS = ['burger-star.ru','92.255.67.83', '127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
     'foodcartapp.apps.FoodcartappConfig',
@@ -41,7 +43,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
 ]
+ROLLBAR = {
+    'access_token': ROLLBAR_KEY,
+    'environment': 'development' if DEBUG else 'production',
+    'branch': 'master',
+    'root': '/absolute/path/to/code/root',
+}
 
 ROOT_URLCONF = 'star_burger.urls'
 
@@ -83,12 +92,12 @@ WSGI_APPLICATION = 'star_burger.wsgi.application'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default='sqlite:////{0}'.format(os.path.join(BASE_DIR, 'db.sqlite3'))
-    )
-}
-
+DATABASES = {'default': dj_database_url.config(default=DB_URL)}
+#DATABASES = {
+#    'default': dj_database_url.config(
+#        default='sqlite:////{0}'.format(os.path.join(BASE_DIR, 'db.sqlite3'))
+#    )
+#}
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -124,4 +133,5 @@ INTERNAL_IPS = [
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),
     os.path.join(BASE_DIR, "bundles"),
+   
 ]

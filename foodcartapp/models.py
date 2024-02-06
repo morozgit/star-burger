@@ -158,22 +158,22 @@ class Order(models.Model):
     ]
     firstname = models.CharField(
         verbose_name='имя',
-        max_length=50
+        max_length=100
     )
     lastname = models.CharField(
         verbose_name='фамилия',
-        max_length=50
+        max_length=100
     )
     phonenumber = PhoneNumberField(region="RU")
 
     address = models.CharField(
         verbose_name='адрес',
-        max_length=50,
+        max_length=100,
         db_index=True
     )
 
     status = models.CharField(
-        max_length=2,
+        max_length=100,
         choices=STATUS_CHOICES,
         db_index=True,
         default='Необработанный',
@@ -181,7 +181,7 @@ class Order(models.Model):
     )
 
     payment = models.CharField(
-        max_length=4,
+        max_length=100,
         choices=PAYMENT_CHOICES,
         db_index=True,
         default='Электронно',
@@ -240,11 +240,11 @@ class OrderItem(models.Model):
         on_delete=models.CASCADE
     )
     price = models.DecimalField(
-        max_digits=4,
+        max_digits=8,
         decimal_places=2,
-        validators=[MinValueValidator(0), MaxValueValidator(9999)]
+        validators=[MinValueValidator(0)]
     )
     quantity = models.IntegerField(
         verbose_name='количество',
-        validators=[MinValueValidator(1), MaxValueValidator(100)]
+        validators=[MinValueValidator(1)]
     )
