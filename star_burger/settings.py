@@ -11,8 +11,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 SECRET_KEY = env('SECRET_KEY')
-#DEBUG = env.bool('DEBUG', False)
-DEBUG = False
+DEBUG = env.bool('DEBUG', False)
 ROLLBAR_KEY = env('ROLLBAR_KEY')
 YANDEX_KEY = env('YANDEX_KEY')
 DB_URL = env.str('DATABASE_URL')
@@ -93,11 +92,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 DATABASES = {'default': dj_database_url.config(default=DB_URL)}
-#DATABASES = {
-#    'default': dj_database_url.config(
-#        default='sqlite:////{0}'.format(os.path.join(BASE_DIR, 'db.sqlite3'))
-#    )
-#}
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -133,5 +127,5 @@ INTERNAL_IPS = [
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),
     os.path.join(BASE_DIR, "bundles"),
-   
+
 ]
