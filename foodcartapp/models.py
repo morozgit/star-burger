@@ -243,11 +243,11 @@ class OrderItem(models.Model):
         max_digits=8,
         max_digits=8,
         decimal_places=2,
-        validators=[MinValueValidator(0)]
+        validators=[MinValueValidator(0)],
         validators=[MinValueValidator(0)]
     )
     quantity = models.IntegerField(
         verbose_name='количество',
-        validators=[MinValueValidator(1)]
+        validators=[MinValueValidator(1)],
         validators=[MinValueValidator(1)]
     )
