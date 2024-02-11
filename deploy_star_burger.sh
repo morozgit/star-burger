@@ -18,7 +18,7 @@ echo "Installed libraries"
 python3 manage.py collectstatic --noinput
 echo "Created static"
 
-python3 manage.py migrate
+python3 manage.py migrate --noinput
 echo "Made migrate"
 
 npm ci --dev
@@ -27,10 +27,9 @@ echo "Installed Node.js"
 ./node_modules/.bin/parcel build bundles-src/index.js --dist-dir bundles --public-url="./"
 echo "Built frontend"
 
-systemctl restart starburger.service
+systemctl restart star_burger.service
 systemctl reload nginx.service
 echo "Restarted system services"
-
 
 commit=$(git rev-parse master)
 
@@ -41,8 +40,8 @@ curl -H "X-Rollbar-Access-Token: $ROLLBAR_KEY" \
      -d '{
   "environment": "production",
   "revision": "'"$commit"'",
-  "rollbar_username": "admin",
-  "local_username": "admin",
+  "rollbar_username": "'$(whoami)'",
+  "local_username": "'$(whoami)'",
   "comment": "deploy",
   "status": "succeeded"
 }'
