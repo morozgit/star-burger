@@ -12,7 +12,7 @@ echo "Activated venv"
 pip3 install -r requirements.txt
 echo "Installed libraries"
 
-python3 manage.py collectstatic
+python3 manage.py collectstatic --noinput
 echo "Created static"
 
 python3 manage.py migrate
@@ -21,7 +21,7 @@ echo "Made migrate"
 npm ci --dev
 echo "Installed Node.js"
 
-./node_modules/.bin/parcel watch bundles-src/index.js --dist-dir bundles --public-url="./"
+./node_modules/.bin/parcel build bundles-src/index.js --dist-dir bundles --public-url="./"
 echo "Built frontend"
 
 systemctl restart starburger.service
