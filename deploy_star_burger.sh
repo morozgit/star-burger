@@ -41,8 +41,8 @@ curl -H "X-Rollbar-Access-Token: $ROLLBAR_KEY" \
      -d '{
   "environment": "production",
   "revision": "'"$commit"'",
-  "rollbar_username": "'$(whoami)'",
-  "local_username": "'$(whoami)'",
+  "rollbar_username": "admin",
+  "local_username": "admin",
   "comment": "deploy",
   "status": "succeeded"
 }'
