@@ -41,6 +41,7 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
 ]
+
 ROLLBAR = {
     'access_token': env('ROLLBAR_KEY', default=None),
     'environment': env('ROLLBAR_ENVIRONMENT', default='development'),
